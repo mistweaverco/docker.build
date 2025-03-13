@@ -11,8 +11,18 @@
 
 <p></p>
 
-A free and open-source Docker registry.
+A free and open-source Docker registry,
+without any pull rate limits.
 
 <p></p>
+
+We're using [Kimbia](https://kimbia.mwco.app) to manage this project.
+
+Use `kimbia describe` to get more information about this project.
+
+<p></p>
+
+Fee free to use this registry for your projects,
+or fork it and host your own.
 
 </div>
