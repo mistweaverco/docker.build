@@ -17,7 +17,7 @@ tasks:
           - linux
           - mac
         run:
-          - sudo htpasswd .htpasswd $USERNAME
+          - sudo htpasswd auth/.htpasswd $USERNAME
 
   - name: build-web
     description: Build the web project
