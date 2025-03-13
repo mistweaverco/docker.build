@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=https://kimbia.mwco.app/schema.json
+---
+tasks:
+  - name: create-user
+    description: |
+      Create a new user
+
+      - `apache2-utils` is required to create a new user
+
+      Usage:
+
+      ```sh
+      USERNAME=<username> kimbia create-user
+      ```
+    commands:
+      - platforms:
+          - linux
+          - mac
+        run:
+          - sudo htpasswd .htpasswd $USERNAME
+
+  - name: build-web
+    description: Build the web project
+    commands:
+      - platforms:
+          - linux
+          - mac
+        run:
+          - cd web && bun install --frozen-lockfile && bun run build
+
+  - name: start-web-dev
+    description: Start the web project in development mode
+    commands:
+      - platforms:
+          - linux
+          - mac
+        run:
+          - cd web && bun install --frozen-lockfile && bun run dev
