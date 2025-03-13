@@ -17,7 +17,7 @@ tasks:
           - linux
           - mac
         run:
-          - sudo htpasswd auth/.htpasswd $USERNAME
+          - htpasswd -Bc auth/htpasswd $USERNAME
 
   - name: build-web
     description: Build the web project
@@ -44,7 +44,7 @@ tasks:
           - linux
           - mac
         run:
-          - docker-compose up -d
+          - docker-compose up -d --force-recreate
 
   - name: stop-service
     description: Stop the service
