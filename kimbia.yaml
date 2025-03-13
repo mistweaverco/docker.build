@@ -36,3 +36,21 @@ tasks:
           - mac
         run:
           - cd web && bun install --frozen-lockfile && bun run dev
+
+  - name: start-service
+    description: Start the service
+    commands:
+      - platforms:
+          - linux
+          - mac
+        run:
+          - docker-compose up -d
+
+  - name: stop-service
+    description: Stop the service
+    commands:
+      - platforms:
+          - linux
+          - mac
+        run:
+          - docker-compose down
